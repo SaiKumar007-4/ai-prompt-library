@@ -1,0 +1,25 @@
+#Python
+__pycache__/
+*.pyc   
+*sqlite3
+.venv/
+
+#node
+node_modules/
+
+#Environment variables
+.env
+
+#Docker logs
+*.log
+
+# VS Code settings
+.vscode/
+
+#Angular
+.angular/
+dist/
+
+#OS files
+.DS_Store
+Thumbs.db
