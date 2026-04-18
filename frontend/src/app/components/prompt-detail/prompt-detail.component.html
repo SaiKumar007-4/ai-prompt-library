@@ -1,0 +1,31 @@
+<h2>Prompt Details</h2>
+
+<div *ngIf="prompt" class="detail-card">
+
+    <h3>{{ prompt.title }}</h3>
+
+    <p class="content">
+        {{ prompt.content }}
+    </p>
+
+    <p>
+
+        <strong>Complexity:</strong>
+
+        <span [class.low]="prompt.complexity <= 3" [class.medium]="prompt.complexity >= 4 && prompt.complexity <= 7"
+            [class.high]="prompt.complexity >= 8" class="badge">
+
+            {{ prompt.complexity }}
+
+        </span>
+
+    </p>
+
+    <p>
+
+        <strong>Views:</strong>
+        {{ prompt.view_count }}
+
+    </p>
+
+</div>

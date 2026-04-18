@@ -1,0 +1,24 @@
+<h2>All Prompts</h2>
+
+<ul>
+
+    <li *ngFor="let prompt of prompts">
+
+        <a [routerLink]="['/prompts', prompt.id]" class="prompt-link">
+
+            <strong>
+                {{ prompt.title }}
+            </strong>
+
+            <span [class.low]="prompt.complexity <= 3" [class.medium]="prompt.complexity >= 4 && prompt.complexity <= 7"
+                [class.high]="prompt.complexity >= 8" class="badge">
+
+                Complexity {{ prompt.complexity }}
+
+            </span>
+
+        </a>
+
+    </li>
+
+</ul>
